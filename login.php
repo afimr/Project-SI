@@ -15,7 +15,7 @@ if(isset($_POST['login'])){
         $_SESSION['log'] = 'True';
         header('location:index.php');
     } else {
-        header('location;login.php');
+        header('location:login.php');
     };
 };
 
