@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Des 2021 pada 17.07
--- Versi server: 10.4.18-MariaDB
--- Versi PHP: 8.0.3
+-- Generation Time: Dec 11, 2021 at 08:14 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `keluar`
+-- Table structure for table `keluar`
 --
 
 CREATE TABLE `keluar` (
@@ -36,7 +36,7 @@ CREATE TABLE `keluar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `keluar`
+-- Dumping data for table `keluar`
 --
 
 INSERT INTO `keluar` (`idkeluar`, `idbarang`, `tanggal`, `penerima`, `qty`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `keluar` (`idkeluar`, `idbarang`, `tanggal`, `penerima`, `qty`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `login`
+-- Table structure for table `login`
 --
 
 CREATE TABLE `login` (
@@ -55,7 +55,7 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `login`
+-- Dumping data for table `login`
 --
 
 INSERT INTO `login` (`iduser`, `email`, `password`) VALUES
@@ -64,29 +64,29 @@ INSERT INTO `login` (`iduser`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `masuk`
+-- Table structure for table `masuk`
 --
 
 CREATE TABLE `masuk` (
   `idmasuk` int(11) NOT NULL,
   `idbarang` int(11) NOT NULL,
-  `tanngal` timestamp NOT NULL DEFAULT current_timestamp(),
+  `tanggal` timestamp NOT NULL DEFAULT current_timestamp(),
   `keterangan` varchar(50) NOT NULL,
   `qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `masuk`
+-- Dumping data for table `masuk`
 --
 
-INSERT INTO `masuk` (`idmasuk`, `idbarang`, `tanngal`, `keterangan`, `qty`) VALUES
+INSERT INTO `masuk` (`idmasuk`, `idbarang`, `tanggal`, `keterangan`, `qty`) VALUES
 (2, 4, '2021-12-11 15:49:55', 'zaki', 1),
 (3, 4, '2021-12-11 15:55:20', 'asep', 20);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `stock`
+-- Table structure for table `stock`
 --
 
 CREATE TABLE `stock` (
@@ -97,7 +97,7 @@ CREATE TABLE `stock` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `stock`
+-- Dumping data for table `stock`
 --
 
 INSERT INTO `stock` (`idbarang`, `namabarang`, `deskripsi`, `stock`) VALUES
@@ -109,53 +109,53 @@ INSERT INTO `stock` (`idbarang`, `namabarang`, `deskripsi`, `stock`) VALUES
 --
 
 --
--- Indeks untuk tabel `keluar`
+-- Indexes for table `keluar`
 --
 ALTER TABLE `keluar`
   ADD PRIMARY KEY (`idkeluar`);
 
 --
--- Indeks untuk tabel `login`
+-- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`iduser`);
 
 --
--- Indeks untuk tabel `masuk`
+-- Indexes for table `masuk`
 --
 ALTER TABLE `masuk`
   ADD PRIMARY KEY (`idmasuk`);
 
 --
--- Indeks untuk tabel `stock`
+-- Indexes for table `stock`
 --
 ALTER TABLE `stock`
   ADD PRIMARY KEY (`idbarang`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `keluar`
+-- AUTO_INCREMENT for table `keluar`
 --
 ALTER TABLE `keluar`
   MODIFY `idkeluar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `login`
+-- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `masuk`
+-- AUTO_INCREMENT for table `masuk`
 --
 ALTER TABLE `masuk`
   MODIFY `idmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `stock`
+-- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
   MODIFY `idbarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
